@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bright Firewood - Firewood Delivery Western Cape</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;family=Playfair+Display:wght@700&amp;display=swap');
+        
+        :root {
+            --primary: #8B4513;
+            --secondary: #D2B48C;
+            --accent: #228B22;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f5f0;
+        }
+        
+        header {
+            background: linear-gradient(rgba(139, 69, 19, 0.9), rgba(139, 69, 19, 0.95)), url('https://picsum.photos/id/1015/1920/1080') center/cover no-repeat;
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+        
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: white;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--secondary);
+        }
+        
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://picsum.photos/id/1015/1920/1080') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: 70px;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            padding: 2rem;
+        }
+        
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.7);
+        }
+        
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background: #006400;
+            transform: scale(1.05);
+        }
+        
+        section {
+            padding: 80px 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h2 {
+            font-size: 2.8rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary);
+            position: relative;
+        }
+        
+        h2:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: var(--accent);
+            margin: 15px auto 0;
+        }
+        
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .product-img {
+            height: 220px;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .card-content {
+            padding: 1.5rem;
+        }
+        
+        .price {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin: 1rem 0;
+        }
+        
+        .areas {
+            background: #f0e6d2;
+        }
+        
+        .areas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .area-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+        
+        .contact {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3rem;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        footer {
+            background: #222;
+            color: #ccc;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            .nav-links {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Bright Firewood</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#areas">Areas</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Premium Firewood for Your Home</h1>
+            <p>Fast delivery across Western Cape. Quality seasoned hardwood that burns longer and cleaner.</p>
+            <a href="#contact" class="btn">Order Now - Call/WhatsApp 078 249 2328</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Bright Firewood</h2>
+            <p style="max-width: 700px; margin: 0 auto 3rem; text-align: center; font-size: 1.2rem;">
+                Hi, I'm <strong>Bright Chisango</strong>. I provide high-quality firewood to homes and businesses throughout the Western Cape. 
+                Our wood is carefully selected, properly seasoned, and ready to keep you warm this winter.
+            </p>
+        </div>
+    </section>
+
+    <section id="products" style="background: #fff;">
+        <div class="container">
+            <h2>Our Pricing</h2>
+            <div class="products">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-img" style="background-image: url('https://picsum.photos/id/1015/600/400');"></div>
+                    <div class="card-content">
+                        <h3>Firewood with Delivery</h3>
+                        <div class="price">R1.20 <span style="font-size:1rem; font-weight:normal;">per piece</span></div>
+                        <p>Convenient delivery right to your door. Ideal for busy households.</p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem;">
+                            <li>Premium seasoned wood</li>
+                            <li>Reliable delivery</li>
+                            <li>Minimum order applies</li>
+                        </ul>
+                        <a href="#contact" class="btn" style="width: 100%; text-align: center; margin-top: 1rem;">Order with Delivery</a>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-img" style="background-image: url('https://picsum.photos/id/133/600/400');"></div>
+                    <div class="card-content">
+                        <h3>Firewood Pickup Only</h3>
+                        <div class="price">R0.85 <span style="font-size:1rem; font-weight:normal;">per piece</span></div>
+                        <p>Save more when you collect from our location. Great value!</p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem;">
+                            <li>Same quality wood</li>
+                            <li>Pickup in Western Cape</li>
+                            <li>Best price option</li>
+                        </ul>
+                        <a href="#contact" class="btn" style="width: 100%; text-align: center; margin-top: 1rem; background: #8B4513;">Arrange Pickup</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="areas" class="areas">
+        <div class="container">
+            <h2>We Deliver Across Western Cape</h2>
+            <div class="areas-grid">
+                <div class="area-item">
+                    <h4>Cape Town</h4>
+                    <p>City Bowl, Southern Suburbs, Northern Suburbs</p>
+                </div>
+                <div class="area-item">
+                    <h4>Stellenbosch &amp; Winelands</h4>
+                    <p>Paarl, Franschhoek, Somerset West</p>
+                </div>
+                <div class="area-item">
+                    <h4>West Coast</h4>
+                    <p>Malmesbury, Vredenburg, Langebaan</p>
+                </div>
+                <div class="area-item">
+                    <h4>South Peninsula</h4>
+                    <p>Simon&#39;s Town, Muizenberg, Fish Hoek</p>
+                </div>
+                <div class="area-item">
+                    <h4>Other Areas</h4>
+                    <p>George, Knysna, Hermanus &amp; more. Contact us for details.</p>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 3rem; font-size: 1.1rem;">
+                Delivery fees may apply depending on location. Call for exact quote.
+            </p>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 style="color: white;">Get In Touch</h2>
+            <div class="contact-info">
+                <div>
+                    <h3>Bright Chisango</h3>
+                    <p style="font-size: 1.8rem; margin: 1rem 0;">
+                        📞 / 💬 <a href="https://wa.me/27782492328" style="color: #fff; text-decoration: underline;">078 249 2328</a>
+                    </p>
+                    <p>WhatsApp or Call for orders, quotes &amp; delivery times</p>
+                </div>
+                <div>
+                    <h3>Business Hours</h3>
+                    <p>Monday - Saturday: 7:00 AM - 6:00 PM</p>
+                    <p>Sunday: By appointment only</p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="https://wa.me/27782492328?text=Hi%20Bright%2C%20I%27m%20interested%20in%20buying%20firewood." 
+                   target="_blank" 
+                   class="btn" 
+                   style="background: white; color: var(--primary); font-size: 1.3rem; padding: 18px 50px;">
+                    Message on WhatsApp Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Bright Firewood - Western Cape. All rights reserved.</p>
+        <p>Quality Firewood | Reliable Service | Fair Prices</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                if (this.getAttribute('href').length > 1) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        window.scrollTo({
+                            top: target.offsetTop - 70,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+        
+        // Mobile menu (simple alert for now)
+        console.log('Website ready for Bright Firewood!');
+    </script>
+</body>
+</html>
